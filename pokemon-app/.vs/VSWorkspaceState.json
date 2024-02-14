@@ -3,10 +3,13 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\pokemon-detail",
+    "\\src\\app\\about",
+    "\\src\\app\\dashboard",
+    "\\src\\app\\pokemon-form",
     "\\src\\app\\service",
-    "\\src\\assets"
+    "\\src\\assets",
+    "\\src\\assets\\images"
   ],
-  "SelectedNode": "\\src\\app\\pokemon-detail\\pokemon-detail.component.html",
+  "SelectedNode": "\\src\\app\\pokemon-form\\pokemon-form.component.html",
   "PreviewInSolutionExplorer": false
 }

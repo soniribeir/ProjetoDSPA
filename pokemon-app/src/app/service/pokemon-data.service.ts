@@ -7,13 +7,14 @@ import { MessageService } from './message.service';
 import { Pokemon } from '../pokemon';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonDataService {
 
   private apiUrl = 'http://softwium.com/api/pokemons';
-
+  //private pokemonsUrl = 'api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -108,4 +109,17 @@ export class PokemonDataService {
       catchError(this.handleError<Pokemon>('deletePokemon'))
     );
   }
+
+  //updatePokemonInMemory(pokemon: Pokemon): Observable<any> {
+  //  return this.http.put(this.pokemonsUrl,pokemon, this.httpOptions).pipe(
+  //    tap(_ => this.log(`updated pokemon id=${pokemon.id}`)),
+  //    catchError(this.handleError<any>('updatePokemonInMemory'))
+  //  );
+  //}
+  //addPokemonInMemory(pokemon: Pokemon): Observable<Pokemon> {
+  //  return this.http.post<Pokemon>(this.pokemonsUrl, pokemon, this.httpOptions).pipe(
+  //    tap((newPokemon: Pokemon) => this.log(`added pokemon w/ id=${newPokemon.id}`)),
+  //    catchError(this.handleError<Pokemon>('addPokemon'))
+  //  );
+  //}
 }

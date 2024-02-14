@@ -18,6 +18,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { PokemonFormComponent } from './pokemon-form/pokemon-form.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { TitleTransformationPipe } from './pipe/title-transformation.pipe';
+//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+//import { InMemoryDataService } from './service/in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,9 @@ import { TitleTransformationPipe } from './pipe/title-transformation.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    //HttpClientInMemoryWebApiModule.forRoot(
+    //  InMemoryDataService, { dataEncapsulation: false }
+    //),
     FormsModule
   ],
   providers: [httpInterceptorProviders],

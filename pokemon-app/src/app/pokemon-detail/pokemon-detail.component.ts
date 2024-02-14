@@ -58,6 +58,15 @@ export class PokemonDetailComponent implements OnInit {
         .subscribe(() => this.goBack());
     }
   }
+
+  //add(name: string): void {
+  //  name = name.trim();
+  //  if (!name) { return; }
+  //  this.pokemonDataService.addPokemon({ name } as Pokemon)
+  //    .subscribe(pokemon => {
+  //      this.pokemon.push(pokemon);
+  //    });
+  //}
 }
 
 

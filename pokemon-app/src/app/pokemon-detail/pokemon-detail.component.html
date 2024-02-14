@@ -23,7 +23,6 @@
 
   <div>
     <label>Pokémon Types:</label>
-    <!--<div *ngFor="let type of pokemon.types">{{ type }}</div>-->
 
     <div class="form-check">
     <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Normal" [(ngModel)]="checkboxStates['Normal']"> Normal
@@ -63,3 +62,14 @@
     <button (click)="goBack()">Back</button>
   </div>
 </div>
+
+<!--<div>
+  <label for="new-pokemon">Pokemon name: </label>
+  <input id="new-pokemon" #pokemonName />
+
+  <button type="button" class="add-button" (click)="add(pokemonName.value); pokemonName.value=''">
+    Add pokemon
+  </button>
+</div>-->
+
+

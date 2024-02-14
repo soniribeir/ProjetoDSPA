@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\pokemon-detail",
+    "\\src\\app\\service",
     "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\pokemon.ts",
+  "SelectedNode": "\\src\\app\\pokemon-detail\\pokemon-detail.component.html",
   "PreviewInSolutionExplorer": false
 }

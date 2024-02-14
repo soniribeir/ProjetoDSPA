@@ -1,0 +1,25 @@
+<div class="header">
+  <img src="/assets/images/Pokémon-Title.png" alt="Pokémon App" class="title-image">
+</div>
+
+<div class="navbar">
+  <a routerLink="/about">About</a>
+  <a routerLink="/dashboard" class="dashboard-button">Dashboard</a>
+  <a routerLink="/pokemons">Pokémons</a>
+  <a routerLink="/form">Form</a>
+
+</div>
+
+<div class="auth-radio">
+  User is authenticated?:
+  <input type="Radio" name="isAuth" (change)="login(false)"> <b>NO</b>
+  <input type="Radio" name="isAuth" (change)="login(true)"> <b>YES</b>
+</div>
+
+
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>
+
+
+  <app-messages></app-messages>

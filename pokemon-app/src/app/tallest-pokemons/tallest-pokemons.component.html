@@ -1,0 +1,11 @@
+<div *ngIf="tallestPokemons && tallestPokemons.length > 0">
+  <h2>The tallest  Pokémons</h2>
+  <ul>
+    <li *ngFor="let pokemon of tallestPokemons">
+      <div class="pokemon-details">
+        <span class="pokemon-name">{{ pokemon.name }}</span>
+        <span class="pokemon-info">Height: {{ pokemon.height }}</span>
+      </div>
+    </li>
+  </ul>
+</div>

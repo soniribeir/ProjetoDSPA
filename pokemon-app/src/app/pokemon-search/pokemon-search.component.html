@@ -1,0 +1,24 @@
+<div class="search-container">
+  <div class="input-container">
+    <input type="number" id="pokemon-id" placeholder="Enter Pokémon ID" #searchInput>
+    <button (click)="searchById(searchInput.valueAsNumber)">Search</button>
+  </div>
+</div>
+
+<ul class="pokemon-list">
+  <li *ngIf="pokemon$ | async as pokemon">
+    <button (click)="goToPokemonDetails(pokemon)">
+      {{ pokemon.name }}
+    </button>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+

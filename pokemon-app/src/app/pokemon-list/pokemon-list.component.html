@@ -1,0 +1,18 @@
+
+<h2>Pokémon List</h2>
+<div class="pokemon-container">
+  <div *ngFor="let pokemon of pokemons" class="pokemon-box" appHighlight>
+    <a routerLink="/detail/{{pokemon.id}}" class="pokemon-link">
+      <img [src]="pokemonImageService.getPokemonImage(pokemon.id)" alt="{{ pokemon.name }}" class="pokemon-image">
+      <div class="pokemon-details">
+        <span class="pokemon-id">{{pokemon.id}}</span>
+        <span class="pokemon-name">{{pokemon.name}}</span>
+      </div>
+    </a>
+    <button type="button" class="delete" title="delete pokemon" (click)="delete(pokemon)">
+      DELETE
+    </button>
+  </div>
+</div>
+
+

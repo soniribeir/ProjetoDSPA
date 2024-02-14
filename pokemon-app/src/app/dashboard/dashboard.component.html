@@ -1,0 +1,34 @@
+<h1>Welcome to Pokémon App!</h1>
+<div class="container1">
+  <app-pokemon-search></app-pokemon-search>
+</div>
+
+<div class="pokemon-statistics">
+  <h2>Pokémon Statistics</h2>
+</div>
+<h3>{{ 'top 3 heaviest:' | titleTransformation }}</h3>
+<div class="container1">
+  <div>
+    <ul>
+      <li *ngFor="let pokemon of heaviestPokemons">
+        <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokemon.id + '.png'" alt="{{ pokemon.name }}" class="pokemon-image">
+        <span class="pokemon-name">{{ pokemon.name }}</span> - Weight: {{ pokemon.weight }}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="container2">
+  <div>
+    <h4>{{'top 3 tallest:' | titleTransformation }}</h4>
+    <ul>
+      <li *ngFor="let pokemon of tallestPokemons">
+        <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + pokemon.id + '.png'" alt="{{ pokemon.name
+      }}" class="pokemon-image">
+        <span class="pokemon-name">{{ pokemon.name }}</span> - Height: {{ pokemon.height }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,70 @@
+<div class="container">
+  <h1>Pokémon Registration</h1>
+  <div class="form-group">
+    <label for="id">Id:</label>
+    <input type="text" class="form-control" id="id" required
+           [(ngModel)]="pokemon.id" name="id" #id="ngModel">
+    <div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+      ID is required!
+    </div>
+
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" name="name" required
+           [(ngModel)]="pokemon.name" #name="ngModel">
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+      Name is required!
+    </div>
+
+    <label for="height">Height:</label>
+    <input type="text" class="form-control" name="height" required
+           [(ngModel)]="pokemon.height" #height="ngModel">
+    <div [hidden]="height.valid || height.pristine" class="alert alert-danger">
+      Height is required!
+    </div>
+
+    <label for="weight">Weight:</label>
+    <input type="text" class="form-control" name="weight" required
+           [(ngModel)]="pokemon.weight" #weight="ngModel">
+    <div [hidden]="weight.valid || weight.pristine" class="alert alert-danger">
+      Weight is required!
+    </div>
+
+    <label>Pokémon Types:</label>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Normal"> Normal
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Grass"> Grass
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Fire"> Fire
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Water"> Water
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Electric"> Electric
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Ice"> Ice
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Fighting"> Fighting
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Poison"> Poison
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Ground"> Ground
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Flying"> Flying
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Psychic"> Psychic
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Bug"> Bug
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Rock"> Rock
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Ghost"> Ghost
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Dragon"> Dragon
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Dark"> Dark
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Steel"> Steel
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Fairy"> Fairy
+      <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Stellar"> Stellar
+    </div>
+    <div [hidden]="!hasSelectedTypes()" class="alert alert-danger">
+        Pokemon Type is required!
+    </div>
+
+
+      <label for="family">Family:</label>
+      <input type="text" class="form-control" name="family" required
+             [(ngModel)]="pokemon.family" #family="ngModel">
+      <div [hidden]="family.valid || family.pristine" class="alert alert-danger">
+        Family is required!
+      </div>
+
+    </div>
+
+    <button type="submit" (click)="save()" class="btn btn-primary">Save</button>
+
+  </div>

@@ -1,0 +1,8 @@
+<h2>Heaviest Pokemons</h2>
+
+<div *ngIf="heaviestPokemons.length > 0" class="pokemon-list">
+  <ul>
+    <li *ngFor="let pokemon of heaviestPokemons">
+      {{ pokemon.name }} - Weight: {{ pokemon.weight }}
+    </li>
+  </ul>

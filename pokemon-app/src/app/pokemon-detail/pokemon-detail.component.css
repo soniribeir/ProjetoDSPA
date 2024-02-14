@@ -1,0 +1,67 @@
+.pokemon-detail {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+  .pokemon-detail h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+
+  .pokemon-detail label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .pokemon-detail input,
+  .pokemon-detail select {
+    width: calc(100% - 20px);
+    margin-bottom: 15px;
+    padding: 8px;
+  }
+
+    .pokemon-detail input[type="text"],
+    .pokemon-detail select {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+      .pokemon-detail input[type="text"]:focus,
+      .pokemon-detail select:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+
+  .pokemon-detail .image-wrapper {
+    margin-bottom: 20px; /* Add space between image and buttons */
+  }
+
+  .pokemon-detail img {
+    width: 200px;
+    height: auto;
+    margin-left: 0px;
+  }
+
+  .pokemon-detail .buttons {
+    text-align: right; /* Align buttons to the right */
+  }
+
+  .pokemon-detail button {
+    margin-left: 10px; /* Add space between buttons */
+    padding: 15px 30px; /* Increase button padding */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+    .pokemon-detail button:hover {
+      background-color: #222;
+    }

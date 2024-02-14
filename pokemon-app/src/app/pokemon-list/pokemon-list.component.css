@@ -1,0 +1,52 @@
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333; 
+  font-size: 2.5rem; 
+  margin: 50px 0; 
+  margin-bottom: 40px;
+  text-align: center; 
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.pokemon-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.pokemon-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.pokemon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+}
+
+.pokemon-details {
+  margin-top: 10px;
+}
+
+.pokemon-id {
+  font-weight: bold;
+}
+
+.pokemon-name {
+  margin-top: 5px;
+}
+.pokemon-id::after {
+  content: ' ';
+}
+

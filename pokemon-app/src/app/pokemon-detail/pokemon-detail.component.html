@@ -1,0 +1,65 @@
+<div *ngIf="pokemon" class="pokemon-detail">
+  <h2>{{ pokemon.name }} Details</h2>
+
+  <div>
+    <label>ID: </label>
+    <span>{{ pokemon.id }}</span>
+  </div>
+
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="pokemon.name" placeholder="Pokemon name" />
+  </div>
+
+  <div>
+    <label>Height: </label>
+    <input [(ngModel)]="pokemon.height" placeholder="Height" />
+  </div>
+
+  <div>
+    <label>Weight: </label>
+    <input [(ngModel)]="pokemon.weight" placeholder="Weight" />
+  </div>
+
+  <div>
+    <label>Pokémon Types:</label>
+    <!--<div *ngFor="let type of pokemon.types">{{ type }}</div>-->
+
+    <div class="form-check">
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Normal" [(ngModel)]="checkboxStates['Normal']"> Normal
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Grass" [(ngModel)]="checkboxStates['Grass']"> Grass
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Fire" [(ngModel)]="checkboxStates['Fire']"> Fire
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Water" [(ngModel)]="checkboxStates['Water']"> Water
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Electric" [(ngModel)]="checkboxStates['Electric']"> Electric
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Ice" [(ngModel)]="checkboxStates['Ice']"> Ice
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Fighting" [(ngModel)]="checkboxStates['Fighting']"> Fighting
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Poison" [(ngModel)]="checkboxStates['Poison']"> Poison
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Ground"[(ngModel)]="checkboxStates['Ground']"> Ground
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Flying"[(ngModel)]="checkboxStates['Flying']"> Flying
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Psychic"[(ngModel)]="checkboxStates['Psychic']"> Psychic
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Bug"[(ngModel)]="checkboxStates['Bug']"> Bug
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Rock"[(ngModel)]="checkboxStates['Rock']"> Rock
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Ghost"[(ngModel)]="checkboxStates['Ghost']"> Ghost
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Dragon"[(ngModel)]="checkboxStates['Dragon']"> Dragon
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Dark"[(ngModel)]="checkboxStates['Dark']"> Dark
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Steel"[(ngModel)]="checkboxStates['Steel']"> Steel
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Fairy"[(ngModel)]="checkboxStates['Fairy']"> Fairy
+    <input type="checkbox" class="form-check-input" name="pokemonTypes" value="Stellar"[(ngModel)]="checkboxStates['Stellar']"> Stellar
+  </div>
+  </div>
+
+
+  <div>
+    <label>Family: </label>
+    <input [(ngModel)]="pokemon.family" placeholder="Family" />
+  </div>
+  <div class="image-wrapper">
+    <label>Image: </label>
+    <img [src]="pokemonImageService.getPokemonImage(pokemon.id)" alt="{{ pokemon.name }}" />
+  </div>
+
+  <div class="buttons">
+    <button (click)="save()">Save</button>
+    <button (click)="goBack()">Back</button>
+  </div>
+</div>
